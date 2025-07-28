@@ -37,15 +37,12 @@ fun ShopEntryCard(
                 modifier = Modifier.fillMaxWidth(),
                 verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
-
-                // --- LINHA SUPERIOR: NOME E DETALHES DO CÁLCULO ---
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        // APLIQUE O MODIFIER.WEIGHT(1F) AQUI
                         modifier = Modifier.weight(1f),
                         text = buildAnnotatedString {
                             withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
@@ -62,8 +59,6 @@ fun ShopEntryCard(
                         modifier = Modifier.padding(start = 8.dp) // Adiciona um respiro
                     )
                 }
-
-                // --- LINHA INFERIOR: TOTAL ALINHADO À DIREITA ---
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.End

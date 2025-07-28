@@ -141,4 +141,8 @@ class Repository private constructor(context: Context) {
         db.shoppListDao().deleteShoppList(shoppList)
         loadAllShoppingLists()
     }
+
+    suspend fun getLatestList(): ShoppListWithEntries? {
+        return db.shoppListDao().getLatestListWithEntries()
+    }
 }

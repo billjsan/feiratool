@@ -30,7 +30,8 @@ import java.util.UUID
 fun AddEntryForm(
     mainViewModel: AirPowerViewModel,
     listId: String,
-    navController: NavHostController
+    navController: NavHostController,
+    onItemSaved: () -> Unit = { navController.popBackStack() }
 ) {
     var newItemName by rememberSaveable { mutableStateOf("") }
     var quantity by rememberSaveable { mutableStateOf("") }
@@ -117,7 +118,7 @@ fun AddEntryForm(
                 newItemName = ""
                 quantity = ""
                 price = ""
-                navController.popBackStack()
+                onItemSaved()
             }
         )
         Spacer(modifier = Modifier.height(15.dp))

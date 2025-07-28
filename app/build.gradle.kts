@@ -62,6 +62,10 @@ dependencies {
     // Room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.runtime.livedata)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
     annotationProcessor(libs.androidx.room.compiler)
     implementation("androidx.room:room-ktx:2.6.1")
 

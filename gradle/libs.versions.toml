@@ -16,6 +16,8 @@ materialIconsExtended = "1.7.7"
 roomRuntime = "2.6.1"
 runtimeLivedata = "1.7.8"
 material3 = "1.2.1"
+activity = "1.10.1"
+constraintlayout = "2.1.4"
 
 
 
@@ -42,6 +44,8 @@ androidx-material-icons-extended = { module = "androidx.compose.material:materia
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
 androidx-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version.ref = "runtimeLivedata" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 
 
 [plugins]

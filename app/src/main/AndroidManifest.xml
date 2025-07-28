@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FeiraTool">
         <activity
+            android:name=".widget.WidgetAddItemActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FeiraTool.TransparentDialog"/>
+        <activity
             android:name=".view.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.FeiraTool">
@@ -21,6 +25,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".widget.FeiraToolWidgetProvider"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/feiratool_widget_info" />
+        </receiver>
     </application>
 
 </manifest>

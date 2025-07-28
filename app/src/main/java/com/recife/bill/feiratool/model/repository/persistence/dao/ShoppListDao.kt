@@ -40,4 +40,8 @@ interface ShoppListDao {
 
     @Delete
     suspend fun deleteShoppList(shoppList: ShoppList)
+
+    @Transaction
+    @Query("SELECT * FROM SHOPP_LIST ORDER BY LIST_DATE DESC LIMIT 1")
+    suspend fun getLatestListWithEntries(): ShoppListWithEntries?
 }
